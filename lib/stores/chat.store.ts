@@ -7,12 +7,14 @@ interface ChatStore extends ChatState {
   setLoading: (loading: boolean) => void;
   setError: (error: string | null) => void;
   clearMessages: () => void;
+  setSelectedAgent: (agentId: string | null) => void;
 }
 
 export const useChatStore = create<ChatStore>((set) => ({
   messages: [],
   isLoading: false,
   error: null,
+  selectedAgentId: null,
 
   addMessage: (message) =>
     set((state) => ({
@@ -39,4 +41,5 @@ export const useChatStore = create<ChatStore>((set) => ({
   setLoading: (loading) => set({ isLoading: loading }),
   setError: (error) => set({ error }),
   clearMessages: () => set({ messages: [], error: null }),
+  setSelectedAgent: (agentId) => set({ selectedAgentId: agentId }),
 }));

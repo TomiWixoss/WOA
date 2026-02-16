@@ -33,12 +33,12 @@ export function Header({ title, description }: HeaderProps) {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuLabel>Tài Khoản</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Settings</DropdownMenuItem>
+          <DropdownMenuItem>Hồ Sơ</DropdownMenuItem>
+          <DropdownMenuItem>Cài Đặt</DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Logout</DropdownMenuItem>
+          <DropdownMenuItem>Đăng Xuất</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </header>

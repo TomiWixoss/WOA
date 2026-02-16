@@ -6,8 +6,8 @@ export default function PlaygroundPage() {
   return (
     <div className="flex h-full flex-col">
       <Header
-        title="Playground"
-        description="Interactive AI world playground"
+        title="Sân Chơi"
+        description="Sân chơi thế giới AI tương tác"
       />
       <div className="flex-1 overflow-auto p-6">
         <div className="mx-auto max-w-5xl">
@@ -16,16 +16,16 @@ export default function PlaygroundPage() {
               <div className="flex items-center gap-3">
                 <PlayCircle className="h-8 w-8 text-primary" />
                 <div>
-                  <CardTitle>Coming Soon</CardTitle>
+                  <CardTitle>Sắp Ra Mắt</CardTitle>
                   <CardDescription>
-                    The playground feature is under development
+                    Tính năng sân chơi đang được phát triển
                   </CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                This will be where you can interact with AI in a text-based world environment.
+                Đây sẽ là nơi bạn có thể tương tác với AI trong môi trường thế giới dạng văn bản.
               </p>
             </CardContent>
           </Card>

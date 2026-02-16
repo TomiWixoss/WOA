@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI World Simulator",
-  description: "Text-based world simulation with AI interaction",
+  title: "Mô Phỏng Thế Giới AI",
+  description: "Mô phỏng thế giới dạng văn bản với tương tác AI",
 };
 
 export default function RootLayout({

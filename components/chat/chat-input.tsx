@@ -34,7 +34,7 @@ export function ChatInput({ onSend, disabled, isLoading }: ChatInputProps) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Type your message... (Shift+Enter for new line)"
+        placeholder="Nhập tin nhắn của bạn... (Shift+Enter để xuống dòng)"
         className="min-h-[60px] resize-none"
         disabled={disabled || isLoading}
       />

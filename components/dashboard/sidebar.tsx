@@ -8,12 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 const navItems = [
-  { href: "/config", label: "Config", icon: Settings },
+  { href: "/config", label: "Xây Dựng", icon: Settings },
   { href: "/chat", label: "Chat", icon: MessageSquare },
-  { href: "/playground", label: "Play", icon: PlayCircle },
-  { href: "/builder", label: "Build", icon: Hammer },
-  { href: "/ai-mind", label: "AI Mind", icon: Brain },
-  { href: "/analytics", label: "Stats", icon: BarChart3 },
+  { href: "/playground", label: "Sân Chơi", icon: PlayCircle },
+  { href: "/builder", label: "Thế Giới", icon: Hammer },
+  { href: "/ai-mind", label: "Tâm Trí", icon: Brain },
+  { href: "/analytics", label: "Thống Kê", icon: BarChart3 },
 ];
 
 export function Sidebar() {

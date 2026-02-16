@@ -27,7 +27,7 @@ export function MessageList({ messages }: MessageListProps) {
       <div className="flex h-full items-center justify-center text-muted-foreground">
         <div className="text-center">
           <Bot className="mx-auto mb-4 h-12 w-12 opacity-50" />
-          <p>No messages yet. Start a conversation!</p>
+          <p>Chưa có tin nhắn. Bắt đầu cuộc trò chuyện!</p>
         </div>
       </div>
     );

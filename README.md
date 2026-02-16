@@ -1,121 +1,117 @@
-# AI World Simulator
+# Mô Phỏng Thế Giới AI
 
-Text-based world simulation with AI interaction powered by multiple LLM providers.
+Mô phỏng thế giới dạng văn bản với tương tác AI được hỗ trợ bởi Nvidia NIM.
 
-## Features
+## Tính Năng
 
-- 🤖 Multi-provider AI support (Nvidia, OpenRouter, Groq, Cerebras, Google AI)
-- 💬 Real-time streaming chat interface
-- ⚙️ Comprehensive AI configuration (temperature, tokens, system prompts)
-- 🎨 Modern UI with shadcn/ui components
-- 📊 Token usage tracking
-- 💾 Persistent configuration storage
+- 🤖 Xây dựng và quản lý nhiều AI agents
+- 💬 Giao diện chat streaming thời gian thực
+- ⚙️ Cấu hình agent toàn diện (system prompt, nhiệt độ, max tokens)
+- 🎨 UI hiện đại với shadcn/ui components
+- 📊 Theo dõi sử dụng token
+- 💾 Lưu trữ agents bền vững
 
-## Tech Stack
+## Công Nghệ
 
 - **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript 5
+- **Ngôn ngữ**: TypeScript 5
 - **Styling**: Tailwind CSS v4
 - **UI Components**: shadcn/ui (New York style)
-- **State Management**: Zustand + Immer
+- **Quản lý State**: Zustand + Immer
 - **AI Framework**: aio-llm
-- **Data Fetching**: TanStack Query
-- **Validation**: Zod
-- **Animations**: Framer Motion
+- **Provider**: Nvidia NIM
+- **Model**: Step 3.5 Flash
+- **Max Tokens**: 16,384
 
-## Getting Started
+## Bắt Đầu
 
-### 1. Install Dependencies
+### 1. Cài Đặt Dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Configure API Keys
-
-Copy `.env.example` to `.env.local`:
-
-```bash
-cp .env.example .env.local
-```
-
-Get your free Nvidia API key at: https://build.nvidia.com/settings/api-keys
-
-Or configure API keys directly in the app's Config tab.
-
-### 3. Run Development Server
+### 2. Chạy Development Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Mở [http://localhost:3000](http://localhost:3000) trong trình duyệt.
 
-## Project Structure
+## Hướng Dẫn Sử Dụng
+
+### 1. Cấu Hình API Key
+
+1. Vào tab **Xây Dựng** (icon ⚙️)
+2. Lấy API key miễn phí tại: https://build.nvidia.com/settings/api-keys
+3. Nhập API key và lưu
+
+### 2. Tạo Agent
+
+1. Trong tab **Xây Dựng**, nhấn "Tạo Agent"
+2. Nhập tên agent (VD: "Trợ Lý Lập Trình")
+3. Nhập mô tả (VD: "Chuyên gia Python và JavaScript")
+4. Tùy chỉnh system prompt
+5. Điều chỉnh tham số (nhiệt độ, max tokens, top_p)
+6. Lưu agent
+
+### 3. Chat với Agent
+
+1. Vào tab **Chat** (icon 💬)
+2. Chọn agent từ dropdown
+3. Gõ tin nhắn và chat
+4. Xem phản hồi streaming thời gian thực
+
+## Cấu Trúc Dự Án
 
 ```
 app/
-├── (dashboard)/          # Dashboard routes
-│   ├── config/          # AI configuration page
-│   ├── chat/            # Chat test page
-│   ├── playground/      # Coming soon
-│   ├── builder/         # Coming soon
-│   ├── analytics/       # Coming soon
-│   └── ai-mind/         # Coming soon
-├── api/
-│   └── chat/            # Chat streaming API
-└── layout.tsx
+├── (dashboard)/
+│   ├── config/          # Xây dựng agents
+│   ├── chat/            # Chat với agents
+│   ├── playground/      # Sắp ra mắt
+│   ├── builder/         # Sắp ra mắt
+│   ├── analytics/       # Sắp ra mắt
+│   └── ai-mind/         # Sắp ra mắt
+└── api/chat/            # API streaming
 
 components/
-├── ui/                  # shadcn components
-├── dashboard/           # Dashboard layout components
-├── config/              # AI config components
-└── chat/                # Chat interface components
+├── config/              # Components xây dựng agent
+├── chat/                # Components chat
+└── dashboard/           # Layout components
 
 lib/
-├── ai/                  # AIO client & types
-├── stores/              # Zustand stores
+├── stores/              # Zustand stores (agents, chat)
 ├── hooks/               # Custom hooks
-├── actions/             # Business logic
-└── validators/          # Zod schemas
-
-types/
-└── index.ts             # Global types
+└── ai/                  # AIO client
 ```
 
-## Usage
+## Tính Năng Agents
 
-### 1. Configure AI
+- Tạo nhiều agents với cấu hình khác nhau
+- Mỗi agent có:
+  - Tên và mô tả riêng
+  - System prompt tùy chỉnh
+  - Tham số riêng (nhiệt độ, max tokens, top_p)
+- Chuyển đổi giữa các agents khi chat
+- Chỉnh sửa và xóa agents
 
-Navigate to the **Config** tab:
-- Select AI provider (Nvidia, OpenRouter, etc.)
-- Enter your API key
-- Choose a model
-- Set system prompt and parameters
-- Save configuration
+## Cấu Hình Mặc Định
 
-### 2. Test Chat
-
-Navigate to the **Chat** tab:
-- Type your message
-- See real-time streaming responses
-- View token usage statistics
-
-## Available Providers
-
-- **Nvidia NIM**: Fast inference with Step 3.5 Flash, Llama models
-- **OpenRouter**: 30+ free models
-- **Groq**: Ultra-fast inference
-- **Cerebras**: Fastest inference
-- **Google AI**: Gemini models with multimodal support
+- **Provider**: Nvidia NIM
+- **Model**: stepfun-ai/step-3.5-flash
+- **Max Tokens**: 16,384
+- **Nhiệt Độ**: 0.7
+- **Top P**: 0.9
 
 ## Scripts
 
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
+npm run dev          # Chạy development server
+npm run build        # Build cho production
+npm run start        # Chạy production server
+npm run lint         # Chạy ESLint
 ```
 
 ## License
