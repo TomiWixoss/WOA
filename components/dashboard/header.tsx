@@ -1,15 +1,6 @@
 "use client";
 
-import { User } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 interface HeaderProps {
   title: string;
@@ -26,21 +17,7 @@ export function Header({ title, description }: HeaderProps) {
         )}
       </div>
 
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <User className="h-5 w-5" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuLabel>Tài Khoản</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Hồ Sơ</DropdownMenuItem>
-          <DropdownMenuItem>Cài Đặt</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Đăng Xuất</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <ThemeToggle />
     </header>
   );
 }
